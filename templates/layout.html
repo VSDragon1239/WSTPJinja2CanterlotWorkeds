@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <style>
+        /* Минимальная стилизация, можете заменить на свою */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f8f0ff; /* Нежный фиолетовый как отсылка к MLP */
+        }
+        header, footer {
+            background: #fadadd; /* Пастельный оттенок */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin-right: 10px;
+            color: #4a148c; /* Темно-фиолетовый */
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .btn {
+            background-color: #4a148c;
+            color: #fff;
+            padding: 7px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #6a1b9a;
+        }
+        .input-field {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Кантерлот — управление работниками</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/workers">Список работников</a>
+            <a href="/workers/add">Добавить работника</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>Кантерлот, Equestria © 2024</p>
+    </footer>
+</body>
+</html>
